@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2</title>
+</head>
+<body>
+
+    <h1 style="text-align: center;">Atividade 2</h1>
+<hr>
+<br>
+    <h2>Questão 1:</h2>
+<br>
+    <p style="text-indent: 150px"><b>Jogo de adivinhação</b></p>
+    <p>Para ganhar, você precisa adivinhar um número entre 1 e 20.</p>
+    <p>Pronto? Se sim, Aperte o botão abaixo para sortear.</p>
+
+    <button id="botao1">Sortear</button>
+<br>
+<br>
+    <input type="number" id="tentativa" min="1" max="20">
+    <button onclick="comparar()">Comparar</button>
+    <p id="resposta"></p>
+<br>
+<hr>
+<br>
+    <h2>Questão 2:</h2>
+<br>
+    <p style="text-indent: 150px"><b>Pedra, Papel ou Tesoura</b></p>
+    <p>No bom e velho Pedra, Papel ou Tesoura, sua função vai ser escolher um dos três para derrotar o computador.</p>
+    <p>Pronto? Se sim, Aperte o botão abaixo para escolher sua opção.</p>
+    <button id="botao2">Escolher</button>
+    <button onclick="limparPPT()">Limpar</button>
+
+<br>
+<br>
+<br>
+<hr>
+<br>
+    <h2>Questão 3:</h2>
+<br>
+
+    <p style="text-indent: 150px"><b>Tabuada Online</b></p>
+    <p>Para revelar sua tabuada, declare o número desejado abaixo:</p>
+    <input type="number" id="valor" min="1"max="20">
+    <button onclick="tabuada()">Calcular</button>
+    <button onclick="limpar()">Limpar</button>
+    <p id="Resultado"></p>
+
+<br>
+<br>
+<hr>
+<br>
+    <h2>Questão 4:</h2>
+<br>
+    <p style="text-indent: 150px"><b>Montando um Triangulo Retangulo</b></p>
+    <p>Para montar seu triangulo, declare abaixo o número de linhas(altura/h) que vc deseja:</p>
+    <input type="number" id="linhas" min="1" max="20">
+    <button onclick="triangulo()">Gerar</button>
+    <button onclick="limpar2()">Limpar</button>
+    <p id="triangulo"></p>
+
+<br>
+<br>
+<hr>
+<br>
+    <h2>Questão 5:</h2>
+<br>
+    <p style="text-indent: 150px"><b>Contagem Crescente de valor Único(1)</b></p>
+    <p>Nesse programa, dependendo do valor inserido, será realizado a soma de N valores constituidos pelo número 1 (Ex: 1, 111 ou 1.111)</p>
+    <p>Insira um valor abaixo</p>
+    <input type="number" id="valor2" min="1" max="20">
+    <button onclick="soma()">Calcular</button>
+    <button onclick="limpar3()">Limpar</button>
+    <p id="sequencia"></p>
+    <p id="resultado3"></p>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
