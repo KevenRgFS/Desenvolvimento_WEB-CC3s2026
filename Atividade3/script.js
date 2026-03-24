@@ -25,12 +25,17 @@ botao2.onclick = function(){
     }
 }
 
-//Texto Dinâmico
+//----------------------------------------------------------------------------------------------------
+//Texto Dinâmico e contador
 
 let texto = document.getElementById("texto");
 let expor = document.getElementById("add");
+let contador = 0;
+let contadorfixo = 0;
+let valorContagem = document.getElementById("contagem");
+let contagemFixa = document.getElementById("contagemFixa");
 
-texto.onkeydown = function(event){
+texto.addEventListener("keydown", function(event){
 
     if(texto.value.toLowerCase() == "limpar"){
         expor.innerHTML = "";
@@ -38,6 +43,45 @@ texto.onkeydown = function(event){
     }
     if(event.key == "Enter"){
         expor.innerHTML += texto.value + "<br>";
-        texto.value = "";
+        texto.value = "";                  
     } 
+})
+
+texto.addEventListener("keydown", function(event){
+
+    if(event.key == " " || event.key == "Shift" || event.key == "Control" || event.key == "Alt" || event.key == "Tab" || event.key == "CapsLock"){
+        return;
+    } 
+    else if(event.key == "Enter"){
+        contador = 0;
+        valorContagem.innerHTML = "Contagem Atual: 0";
+    }
+    else if(event.key == "Backspace"){
+        contador--;
+        valorContagem.innerHTML = "Contagem Atual: " + contador;
+        if(contador < 0){
+            contador = 0;
+            valorContagem.innerHTML = "Contagem Atual: " + contador;
+        }
+    }
+    else{
+        contador++;
+        contadorfixo++;
+        valorContagem.innerHTML = "Contagem Atual: " + contador;
+        contagemFixa.innerHTML = "Contagem Fixa: " + contadorfixo;
+
+    }
+})
+
+//----------------------------------------------------------------------------------------------------
+//Limpar todo o site
+
+let botaoX = document.getElementById("atomico");
+
+botaoX.onclick = function(){
+    resultado.innerHTML = "0";
+    expor.innerHTML = "";
+    valorContagem.innerHTML = "Contagem Atual: 0";
+    contagemFixa.innerHTML = "Contagem Fixa: 0";
+    texto.value = "";   
 }
