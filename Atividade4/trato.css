@@ -1,0 +1,54 @@
+.banner{
+    background-color: #0410fc;
+    color: rgb(255, 255, 255);
+    padding: 6px;
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.banner-item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color:rgb(230, 170, 128)
+}
+
+.cabecalho {
+    padding-top: 100px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.tabela {
+    text-align: center;
+    padding-bottom: 20px;
+    border-collapse: collapse;
+    font-weight: bold;
+    
+}
+
+ul {
+    list-style-position: inside;
+    text-align: center; 
+    padding: 0; 
+    margin: 0;
+}
+
+li {
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 5px;
+    font-size: 1.2rem; 
+}
